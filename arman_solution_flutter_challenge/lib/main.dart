@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         title: 'Arman So.',
         theme: AppTheme.getThemeData(),
+        debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter.onGenerateRoute,
       );
 }

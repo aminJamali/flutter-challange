@@ -1,4 +1,4 @@
 class ApiEndPoint {
-  static const String baseUrl = 'https:///api/';
+  static const String baseUrl = 'https://armansolutions.com/api/';
 
 }
