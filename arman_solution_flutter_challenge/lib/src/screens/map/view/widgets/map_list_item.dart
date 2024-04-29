@@ -4,12 +4,13 @@ import '../../model/map_model.dart';
 
 class MapListItem extends StatelessWidget {
   final MapModel item;
+  final void Function() onTap;
 
-  const MapListItem({required this.item, super.key});
+  const MapListItem({required this.onTap, required this.item, super.key});
 
   @override
   Widget build(BuildContext context) => InkWell(
-        onTap: () {},
+        onTap: onTap,
         child: Card(
           child: Padding(
             padding: const EdgeInsets.all(16),

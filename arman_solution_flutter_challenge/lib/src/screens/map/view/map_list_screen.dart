@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../../infrastructure/router/route_names.dart';
 import '../provider/map_provider.dart';
 import 'widgets/map_list_item.dart';
 
@@ -33,8 +34,15 @@ class _MapListScreenState extends State<MapListScreen> {
                 top: 8,
               ),
               itemCount: provider.maps.length,
-              itemBuilder: (final _, final index) =>
-                  MapListItem(item: mapProvider.maps[index]),
+              itemBuilder: (final _, final index) => MapListItem(
+                item: mapProvider.maps[index],
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    RouteNames.selectSeat,
+                  );
+                },
+              ),
             ),
           ),
         ),
