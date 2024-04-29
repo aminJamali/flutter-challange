@@ -33,7 +33,7 @@ class LightTheme extends BaseTheme {
         fontFamily: currentFontFamily,
         disabledColor: disabledColor,
         appBarTheme: AppBarTheme(
-          backgroundColor: cardColor,
+          backgroundColor: primarySwatch,
           elevation: 1,
         ),
         scaffoldBackgroundColor: scaffoldBackgroundColor,
@@ -186,39 +186,39 @@ class LightTheme extends BaseTheme {
 
   @override
   void changeColorBlindnessType(ColorBlindnessType type) {
-    // primarySwatch = MaterialColor(0xFF10AC84, <int, Color>{
-    //   50: colorBlindness(const Color(0xff0e9b77), type),
-    //   100: colorBlindness(const Color(0xff0d8a6a), type),
-    //   200: colorBlindness(const Color(0xff0b785c), type),
-    //   300: colorBlindness(const Color(0xff085642), type),
-    //   400: colorBlindness(const Color(0xff064535), type),
-    //   500: colorBlindness(const Color(0xff053428), type),
-    //   600: colorBlindness(const Color(0xff03221a), type),
-    //   700: colorBlindness(const Color(0xff02110d), type),
-    //   800: colorBlindness(const Color(0xff000000), type),
-    // });
-    //
-    // chipBackgroundColor = colorBlindness(const Color(0xffFFD7D5), type);
-    // chipBackgroundColor2 = colorBlindness(const Color(0xffE2E8F0), type);
-    // iconBackgroundColor = colorBlindness(const Color(0xffCAE3FE), type);
-    // secondaryColor = colorBlindness(const Color(0xffF8833E), type);
-    //
-    // successColor = const Color(0xff08C94F);
-    // warningColor = const Color(0xffF8833E);
-    // dangerColor = const Color(0xffDC2626);
-    // infoColor = const Color(0xff46A5E5);
-    //
-    // textColor = const Color(0xff000000);
-    // dangerColor = const Color(0xffEB3939);
-    // endColor = const Color(0xff008299);
-    // warningColor = const Color(0xffF57F17);
-    // scaffoldBackgroundColor = const Color(0xffF0F1F3);
-    // infoColor = const Color(0xff4F46E5);
-    // cardColor = Colors.white;
-    // communicationMineItemColor = const Color(0xffD9FDD3);
-    // communicationOthersItemColor = const Color(0xffffffff);
-    // borderColor = const Color(0xffd3d3d3);
-    // communicationMaskedColor = Colors.blue.shade100;
-    // disabledColor = Colors.grey.withOpacity(.8);
+    primarySwatch = MaterialColor(0xFF10AC84, <int, Color>{
+      50: colorBlindness(const Color(0xff0e9b77), type),
+      100: colorBlindness(const Color(0xff0d8a6a), type),
+      200: colorBlindness(const Color(0xff0b785c), type),
+      300: colorBlindness(const Color(0xff085642), type),
+      400: colorBlindness(const Color(0xff064535), type),
+      500: colorBlindness(const Color(0xff053428), type),
+      600: colorBlindness(const Color(0xff03221a), type),
+      700: colorBlindness(const Color(0xff02110d), type),
+      800: colorBlindness(const Color(0xff000000), type),
+    });
+
+    chipBackgroundColor = colorBlindness(const Color(0xffFFD7D5), type);
+    chipBackgroundColor2 = colorBlindness(const Color(0xffE2E8F0), type);
+    iconBackgroundColor = colorBlindness(const Color(0xffCAE3FE), type);
+    secondaryColor = colorBlindness(const Color(0xffF8833E), type);
+
+    successColor = const Color(0xff08C94F);
+    warningColor = const Color(0xffF8833E);
+    dangerColor = const Color(0xffDC2626);
+    infoColor = const Color(0xff46A5E5);
+
+    textColor = const Color(0xff000000);
+    dangerColor = const Color(0xffEB3939);
+    endColor = const Color(0xff008299);
+    warningColor = const Color(0xffF57F17);
+    scaffoldBackgroundColor = const Color(0xffF0F1F3);
+    infoColor = const Color(0xff4F46E5);
+    cardColor = Colors.white;
+    communicationMineItemColor = const Color(0xffD9FDD3);
+    communicationOthersItemColor = const Color(0xffffffff);
+    borderColor = const Color(0xffd3d3d3);
+    communicationMaskedColor = Colors.blue.shade100;
+    disabledColor = Colors.grey.withOpacity(.8);
   }
 }

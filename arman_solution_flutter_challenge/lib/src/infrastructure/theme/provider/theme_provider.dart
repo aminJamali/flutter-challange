@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../shared/model/blindness_type.dart';
 import '../../utils/font_util.dart';
 import '../app_color_blindness.dart';
 import '../base_theme.dart';
@@ -13,6 +14,7 @@ class ThemeProvider extends ChangeNotifier {
   double currentFontSliderValue = 1;
 
   ThemeType currentThemeType = ThemeType.light;
+  BlindnessType currentBlindnessType = BlindnessType.none;
 
   BaseTheme baseTheme = LightTheme(ColorBlindnessType.none);
   late SharedPreferences preferences;
@@ -26,9 +28,7 @@ class ThemeProvider extends ChangeNotifier {
     baseTheme = theme;
     preferences = await SharedPreferences.getInstance();
     await preferences.setBool(
-      'isLightTheme',
-      currentThemeType == ThemeType.light,
-    );
+        'isLightTheme', currentThemeType == ThemeType.light);
 
     notifyListeners();
   }
@@ -38,10 +38,8 @@ class ThemeProvider extends ChangeNotifier {
     baseTheme.currentFontFamily = value.name;
 
     preferences = await SharedPreferences.getInstance();
-    await preferences.setString(
-      'fontFamily',
-      baseTheme.currentFontFamily == 'Quicksand' ? 'Quicksand' : 'Inter',
-    );
+    await preferences.setString('fontFamily',
+        baseTheme.currentFontFamily == 'Quicksand' ? 'Quicksand' : 'Inter');
 
     notifyListeners();
   }

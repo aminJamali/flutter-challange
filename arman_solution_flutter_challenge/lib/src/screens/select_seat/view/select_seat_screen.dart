@@ -36,7 +36,9 @@ class _SelectSeatScreenState extends State<SelectSeatScreen> {
                 Utils.largeVerticalSpacer,
                 const Text('This side is the field'),
                 Utils.mediumVerticalSpacer,
-                const Divider(),
+                 Divider(
+                  color: Utils.getBaseTheme(context).disabledColor,
+                ),
                 const SizedBox(
                   height: 50,
                 ),
